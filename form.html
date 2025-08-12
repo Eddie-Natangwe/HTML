@@ -1,130 +1,164 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Basic HTML Form</title>
-  <style>
-    :root{--max-width:760px;--gap:12px;font-family:Inter,system-ui,Segoe UI,Roboto,Arial,sans-serif}
-    body{display:flex;align-items:center;justify-content:center;padding:24px;background:#f7fafc}
-    .card{width:100%;max-width:var(--max-width);background:#fff;padding:20px;border-radius:12px;box-shadow:0 6px 20px rgba(12,18,26,0.06)}
-    h1{margin:0 0 8px;font-size:1.25rem}
-    p.lead{margin:0 0 18px;color:#555}
-    form{display:grid;grid-template-columns:1fr 1fr;gap:var(--gap);align-items:start}
-    label{display:block;font-size:.85rem;margin-bottom:6px;color:#222}
-    input[type="text"],input[type="email"],input[type="password"],input[type="tel"],select,textarea{width:100%;padding:10px;border:1px solid #d8e1e8;border-radius:8px;font-size:.95rem}
-    textarea{min-height:120px;grid-column:1 / -1}
-    .full{grid-column:1 / -1}
-    .actions{display:flex;gap:10px;justify-content:flex-end;grid-column:1 / -1}
-    button{padding:10px 14px;border-radius:8px;border:0;font-weight:600;cursor:pointer}
-    button.primary{background:#2563eb;color:white}
-    button.ghost{background:transparent;border:1px solid #cbd5e1}
-    .hint{font-size:.8rem;color:#666}
-    @media (max-width:640px){form{grid-template-columns:1fr}textarea{min-height:100px}}
-  </style>
-</head>
-<body>
-  <main class="card">
-    <h1>Sign up — Basic HTML Form</h1>
-    <p class="lead">A simple, accessible form with client-side validation and responsive layout.</p>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Basic HTML Form</title>
+  </head>
+  <body>
+    <main class="card">
+      <h1>Sign up — Basic HTML Form</h1>
+      <p class="lead">
+        A simple, accessible form with client-side validation and responsive
+        layout.
+      </p>
 
-    <form id="signupForm" action="#" method="post" novalidate>
-      <div>
-        <label for="firstName">First name</label>
-        <input id="firstName" name="firstName" type="text" required placeholder="Jane" />
-      </div>
+      <form id="signupForm" action="#" method="post" novalidate>
+        <div>
+          <label for="firstName">First name</label>
+          <input
+            id="firstName"
+            name="firstName"
+            type="text"
+            required
+            placeholder="Jane"
+          />
+        </div>
 
-      <div>
-        <label for="lastName">Last name</label>
-        <input id="lastName" name="lastName" type="text" required placeholder="Doe" />
-      </div>
+        <div>
+          <label for="lastName">Last name</label>
+          <input
+            id="lastName"
+            name="lastName"
+            type="text"
+            required
+            placeholder="Doe"
+          />
+        </div>
 
-      <div>
-        <label for="email">Email</label>
-        <input id="email" name="email" type="email" required placeholder="you@example.com" />
-      </div>
+        <div>
+          <label for="email">Email</label>
+          <input
+            id="email"
+            name="email"
+            type="email"
+            required
+            placeholder="you@example.com"
+          />
+        </div>
 
-      <div>
-        <label for="phone">Phone</label>
-        <input id="phone" name="phone" type="tel" pattern="\+?\d{7,15}" placeholder="+264 81 000 0000" />
-        <div class="hint">Optional — international format recommended</div>
-      </div>
+        <div>
+          <label for="phone">Phone</label>
+          <input
+            id="phone"
+            name="phone"
+            type="tel"
+            pattern="\+?\d{7,15}"
+            placeholder="+264 81 000 0000"
+          />
+          <div class="hint">Optional — international format recommended</div>
+        </div>
 
-      <div>
-        <label for="password">Password</label>
-        <input id="password" name="password" type="password" minlength="8" required placeholder="At least 8 characters" />
-      </div>
+        <div>
+          <label for="password">Password</label>
+          <input
+            id="password"
+            name="password"
+            type="password"
+            minlength="8"
+            required
+            placeholder="At least 8 characters"
+          />
+        </div>
 
-      <div>
-        <label for="age">Age</label>
-        <input id="age" name="age" type="number" min="13" max="120" />
-      </div>
+        <div>
+          <label for="age">Age</label>
+          <input id="age" name="age" type="number" min="13" max="120" />
+        </div>
 
-      <div class="full">
-        <label>Gender</label>
-        <label><input type="radio" name="gender" value="female"> Female</label>
-        <label><input type="radio" name="gender" value="male"> Male</label>
-        <label><input type="radio" name="gender" value="other"> Other</label>
-      </div>
+        <div class="full">
+          <label>Gender</label>
+          <label
+            ><input type="radio" name="gender" value="female" /> Female</label
+          >
+          <label><input type="radio" name="gender" value="male" /> Male</label>
+          <label
+            ><input type="radio" name="gender" value="other" /> Other</label
+          >
+        </div>
 
-      <div class="full">
-        <label>Interests</label>
-        <label><input type="checkbox" name="interests" value="coding"> Coding</label>
-        <label><input type="checkbox" name="interests" value="design"> Design</label>
-        <label><input type="checkbox" name="interests" value="marketing"> Marketing</label>
-      </div>
+        <div class="full">
+          <label>Interests</label>
+          <label
+            ><input type="checkbox" name="interests" value="coding" />
+            Coding</label
+          >
+          <label
+            ><input type="checkbox" name="interests" value="design" />
+            Design</label
+          >
+          <label
+            ><input type="checkbox" name="interests" value="marketing" />
+            Marketing</label
+          >
+        </div>
 
-      <div>
-        <label for="country">Country</label>
-        <select id="country" name="country" required>
-          <option value="">Select your country</option>
-          <option>Namibia</option>
-          <option>South Africa</option>
-          <option>United States</option>
-          <option>United Kingdom</option>
-          <option>Other</option>
-        </select>
-      </div>
+        <div>
+          <label for="country">Country</label>
+          <select id="country" name="country" required>
+            <option value="">Select your country</option>
+            <option>Namibia</option>
+            <option>South Africa</option>
+            <option>United States</option>
+            <option>United Kingdom</option>
+            <option>Other</option>
+          </select>
+        </div>
 
-      <div>
-        <label for="avatar">Profile photo</label>
-        <input id="avatar" name="avatar" type="file" accept="image/*" />
-      </div>
+        <div>
+          <label for="avatar">Profile photo</label>
+          <input id="avatar" name="avatar" type="file" accept="image/*" />
+        </div>
 
-      <div class="full">
-        <label for="message">Tell us about yourself</label>
-        <textarea id="message" name="message" placeholder="A short bio..."></textarea>
-      </div>
+        <div class="full">
+          <label for="message">Tell us about yourself</label>
+          <textarea
+            id="message"
+            name="message"
+            placeholder="A short bio..."
+          ></textarea>
+        </div>
 
-      <div class="actions">
-        <button type="reset" class="ghost">Reset</button>
-        <button type="submit" class="primary">Create account</button>
-      </div>
-    </form>
+        <div class="actions">
+          <button type="reset" class="ghost">Reset</button>
+          <button type="submit" class="primary">Create account</button>
+        </div>
+      </form>
 
-    <script>
-      // Simple client-side validation and friendly error messages
-      const form = document.getElementById('signupForm');
-      form.addEventListener('submit', function(e){
-        if(!form.checkValidity()){
-          e.preventDefault();
-          // find first invalid field and focus it
-          const firstInvalid = form.querySelector(':invalid');
-          if(firstInvalid){
-            firstInvalid.focus();
+      <script>
+        // Simple client-side validation and friendly error messages
+        const form = document.getElementById("signupForm");
+        form.addEventListener("submit", function (e) {
+          if (!form.checkValidity()) {
+            e.preventDefault();
+            // find first invalid field and focus it
+            const firstInvalid = form.querySelector(":invalid");
+            if (firstInvalid) {
+              firstInvalid.focus();
+            }
+            alert("Please fill in the required fields correctly.");
+          } else {
+            // Normally you'd submit the form to the server here.
+            e.preventDefault();
+            const data = new FormData(form);
+            // Example: print values to console
+            console.log("Form data:");
+            for (const [k, v] of data.entries()) console.log(k, v);
+            alert("Form submitted (demo) — check console for values.");
           }
-          alert('Please fill in the required fields correctly.');
-        } else {
-          // Normally you'd submit the form to the server here.
-          e.preventDefault();
-          const data = new FormData(form);
-          // Example: print values to console
-          console.log('Form data:');
-          for (const [k,v] of data.entries()) console.log(k, v);
-          alert('Form submitted (demo) — check console for values.');
-        }
-      });
-    </script>
-  </main>
-</body>
+        });
+      </script>
+    </main>
+  </body>
 </html>
